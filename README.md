@@ -5,6 +5,22 @@ Terraform module which creates simple SQS queues and consumer/producer IAM polic
 
 Terraform 0.12
 
+## Usage
+
+```hcl
+module "sqs" {
+  source  = "brunordias/sqs/aws"
+  version = "~> 1.0.0"
+
+  name       = "terraform-sqs-test"
+  fifo_queue = false
+
+  tags = {
+    environment = "development"
+  }
+}
+```
+
 ## Requirements
 
 No requirements.
